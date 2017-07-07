@@ -83,23 +83,23 @@ $api->NewRouter()
 			//file_get_contents('http://localhost:9001/echo');
 
 			// // create curl resource 
-	        // $ch = curl_init(); 
+	        $ch = curl_init(); 
 
-	        // // set url 
-	        // curl_setopt($ch, CURLOPT_URL, "http://localhost:9001/echo"); 
+	        // set url 
+	        curl_setopt($ch, CURLOPT_URL, "http://localhost:9001/echo"); 
 
-	        // //return the transfer as a string 
-	        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	        //return the transfer as a string 
+	        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
-	        // // $output contains the output string 
-	        // $output = curl_exec($ch);
+	        // $output contains the output string 
+	        $output = curl_exec($ch);
 
-	        // // close curl resource to free up system resources 
-	        // curl_close($ch);
+	        // close curl resource to free up system resources 
+	        curl_close($ch);
 		        
 
-			// echo "\n";
-			// echo $output;
+			echo "\n";
+			echo $output;
 			   
 		}
 	)
